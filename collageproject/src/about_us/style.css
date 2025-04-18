@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #081B29;
+}
+
+.pic {
+  height: auto;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  width: 540px;
+}
+
+.text h2 {
+  color: white;
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text h5 {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+span {
+  color: #4070f4;
+}
+
+.text p {
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+.text ul {
+  color: white;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.text ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.data {
+  margin-top: 30px;
+}
+
+.hire {
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.hire:hover {
+  background: #000;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.back-icon {
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pic {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .text h2 {
+    font-size: 50px;
+  }
+
+  .text h5 {
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .hire {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .back-button {
+    padding: 5px 12px;
+    font-size: 14px;
+  }
+
+  .back-icon {
+    font-size: 16px;
+    margin-right: 6px;
+  }
+
+  .text ul {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h2 {
+    font-size: 40px;
+  }
+
+  .text h5 {
+    font-size: 16px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  .text ul {
+    font-size: 14px;
+  }
+}

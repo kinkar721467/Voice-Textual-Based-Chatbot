@@ -1,0 +1,234 @@
+:root {
+    --background: #fff;
+    --light-background: #081B29;
+    --primary-color: #4f46e5;
+    --light-text: #555;
+    --border-radius: 12px;
+    --transition: 0.3s ease-in-out;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-background);
+    color: #222;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Pricing Cards Container */
+.pricing-cards {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Pricing Cards */
+.price-card {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.price-card.featured {
+    border: 2px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.price-card.featured::before {
+    content: "Most Popular";
+    position: absolute;
+    top: 1rem;
+    right: -2.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.3rem 3rem;
+    transform: rotate(45deg);
+    font-size: 0.9rem;
+}
+
+/* Card Content */
+.price-card h3 {
+    font-size: clamp(1.4rem, 4vw, 1.75rem);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.price-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.price-card ul li {
+    padding: 0.5rem 0;
+    color: var(--light-text);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.price-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    border: none;
+    transition: background var(--transition), transform var(--transition);
+    text-align: center;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #3b37cc;
+}
+
+.btn:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .pricing-cards {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+
+    .price-card {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pricing-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .pricing {
+        padding: 4rem 2rem;
+    }
+
+    .price-card.featured {
+        transform: scale(1.05);
+    }
+
+    .price-card.featured:hover {
+        transform: scale(1.05) translateY(-5px);
+    }
+}
+
+@media (max-width: 599px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+}
+
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+  }
+
+  .back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  .back-icon {
+    /* margin-right: 10px; */
+    color: white;
+    font-size: 20px;
+  }
